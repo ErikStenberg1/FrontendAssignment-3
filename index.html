@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="todo.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>todos</h1>
+    </header>
+    <main>
+        <div id="input">
+            <input type="checkbox" id="mark-all-complete">
+            <label for="mark-all-complete">🔽</label>
+            <input type="text" id="new-item" placeholder="What needs to be done?" autofocus>
+        </div>
+        <ul id="notes">
+            <li id="note-template">
+                <input type="checkbox" id="mark-complete">
+                <input class="note-unfocused" id="note-text" type="text" readonly="true">
+                <button type="button" id="delete">❌</button>
+            </li>
+        </ul>
+        <div id="dashboard">
+            <span id="items-left-counter">0 items left</span>
+            <ul id="filter-buttons">
+                <li>
+                    <input type="radio" id="all" name="filter-button" checked="checked">
+                    <label for="all">All</label>
+                </li>
+                <li>
+                    <input type="radio" id="active" name="filter-button">
+                    <label for="active">Active</label>
+                </li>
+                <li>
+                    <input type="radio" id="completed" name="filter-button">
+                    <label for="completed">Completed</label>
+                </li>
+            </ul>
+            <input type="button" id="clear">
+            <label for="clear">Clear completed</label>
+
+        </div>
+    </main>
+    <footer>
+        <p>Double-click to edit a todo</p>
+        <p>Written by <a href="https://github.com/nlandegren">Nils Landegren</a> and
+        <a href="https://github.com/ErikStenberg1">Erik Stenberg</a></p>
+        <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+    </footer>
+</body>
+</html>
